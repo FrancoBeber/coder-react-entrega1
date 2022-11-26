@@ -2,17 +2,10 @@ import React from "react";
 import "./item.css";
 
 function ItemListContainer(props) {
-  const { precio, producto, genero, img } = props;
+  const { saludo } = props;
   return (
-    <div className="card">
-      <div className="card-img">
-        <img src={img} alt="aire acondicionado"></img>
-      </div>
-      <div className="card-detail">
-        <h3>{producto}</h3>
-        <h3>{genero}</h3>
-        <h4>{precio}</h4>
-      </div>
+    <div className="saludoInicial">
+      <h1>{saludo}</h1>
     </div>
   );
 }

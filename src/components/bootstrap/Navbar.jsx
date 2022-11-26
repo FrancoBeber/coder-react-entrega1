@@ -27,17 +27,17 @@ function Navbar() {
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <a className="nav-link active" href="#">
                 Terror
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <a className="nav-link active" href="#">
                 Deportes
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link">Accion</a>
+              <a className="nav-link active">Accion</a>
             </li>
             <li className="nav-item">
               <a className="nav-link ">
