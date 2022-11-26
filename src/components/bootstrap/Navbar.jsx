@@ -5,8 +5,8 @@ function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg bg-primary">
       <div className="container-fluid">
-        <a className="navbar-brand" href="/">
-          Navbar
+        <a className="navbar-brand" href="#">
+          EASYPLAY
         </a>
         <button
           className="navbar-toggler"
@@ -23,21 +23,21 @@ function Navbar() {
           <ul className="navbar-nav">
             <li className="nav-item">
               <a className="nav-link active" aria-current="page" href="/">
-                Home
+                Inicio
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/">
-                Features
+              <a className="nav-link" href="#">
+                Terror
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/">
-                Pricing
+              <a className="nav-link" href="#">
+                Deportes
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link ">Disabled</a>
+              <a className="nav-link">Accion</a>
             </li>
             <li className="nav-item">
               <a className="nav-link ">
