@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <Header />
-      <ItemListContainer saludo="Bienvenidos!!!" />
+      <ItemListContainer />
     </>
   );
 }
