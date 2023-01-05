@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { getSingleItem } from "../services/mockService";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import "./ItemDetail.css";
+import ItemCount from "./ItemCount/ItemCount";
 
 function ItemDetailContainer() {
   const [product, setProduct] = useState([]);
+  const [countInCart, setCountInCart] = useState(0);
   let { id } = useParams();
   useEffect(() => {
     getSingleItem(id)
@@ -13,6 +15,11 @@ function ItemDetailContainer() {
       })
       .catch((error) => alert("Producto no encontrado"));
   }, []);
+
+  function handleAddToCart(count) {
+    setCountInCart(count);
+    console.log("compraste items: ", count);
+  }
 
   return (
     <div className="card-itemDetail">
@@ -24,6 +31,8 @@ function ItemDetailContainer() {
         <h3>{product.genero}</h3>
         <h3 className="price-detail">${product.precio}</h3>
       </div>
+      <ItemCount onAddToCart={handleAddToCart} />
+      <Link to="/cart">Ir al carrito</Link>
     </div>
   );
 }
