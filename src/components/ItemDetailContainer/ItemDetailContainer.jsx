@@ -1,12 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import { getSingleItem } from "../services/mockService";
 import { Link, useParams } from "react-router-dom";
 import "./ItemDetail.css";
 import ItemCount from "./ItemCount/ItemCount";
+import { cartContext } from "../../storage/cartContext";
 
 function ItemDetailContainer() {
   const [product, setProduct] = useState([]);
   const [countInCart, setCountInCart] = useState(0);
+  const { addToCart } = useContext(cartContext);
+
   let { id } = useParams();
   useEffect(() => {
     getSingleItem(id)
@@ -18,7 +21,8 @@ function ItemDetailContainer() {
 
   function handleAddToCart(count) {
     setCountInCart(count);
-    console.log("compraste items: ", count);
+    addToCart(product, count);
+    console.log("compraste items:", count);
   }
 
   return (

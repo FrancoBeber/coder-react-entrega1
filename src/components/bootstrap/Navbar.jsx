@@ -1,6 +1,7 @@
 import React from "react";
 import CartWidget from "../CartWidget/CartWidget";
 import { Link } from "react-router-dom";
+import Contacto from "../../pages/Contacto";
 
 function Navbar() {
   return (
@@ -45,6 +46,11 @@ function Navbar() {
             <li className="nav-item">
               <Link className="nav-link active" to="/item">
                 Detalle
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link active" to="/Contacto">
+                Contacto
               </Link>
             </li>
             <li className="nav-item">
